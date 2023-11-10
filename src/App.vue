@@ -1,29 +1,5 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { ref } from 'vue'
-
-const menu = ref([
-  { 
-    path: '/',
-    title: 'About Me'
-  },
-  { 
-    path: '/blog',
-    title: 'Blog'
-  },
-  { 
-    path: '/resume',
-    title: 'Resume'
-  },
-  { 
-    path: '/linkedin',
-    title: 'LinkedIn'
-  },
-  { 
-    path: '/github',
-    title: 'GitHub'
-  }
-])
 </script>
 
 <template>
@@ -32,17 +8,38 @@ const menu = ref([
       <v-list-item title="alexjf.dev" subtitle="Welcome to my website!" />
       <v-divider />
       <v-list-item
-        v-for="(item, i) in menu"
-        :key="i"
-        :to="item.path"
-        :title="item.title"
+        to="/"
+        title="About Me"
+      ></v-list-item>
+      <v-list-item
+        to="/blog"
+        title="Blog"
+      ></v-list-item>
+      <v-list-item
+        to="/resume"
+        title="Resume"
+      ></v-list-item>
+      <v-list-item
+        href="https://www.linkedin.com/in/alexander-fuhrig/"
+        title="LinkedIn"
+        target="_blank"
+      ></v-list-item>
+      <v-list-item
+        href="https://github.com/AlexJFDev"
+        title="GitHub"
+        target="_blank"
       ></v-list-item>
     </v-navigation-drawer>
     <v-main>
-      <RouterView/>
+      <div class="router-container">
+        <RouterView></RouterView>
+      </div>
     </v-main>
   </v-app>
 </template>
 
 <style scoped>
+.router-container {
+  margin: 16px;
+}
 </style>
