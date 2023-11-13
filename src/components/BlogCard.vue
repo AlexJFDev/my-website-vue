@@ -5,11 +5,12 @@ const router = useRouter()
 
 defineProps({
   title: String,
-  subtitle: String
+  subtitle: String,
+  path: String
 })
 
-function goToBlog(blogPath) {
-  router.push(`/blog/${blogPath}`)
+function goToBlog(path) {
+  router.push(`/blog/${path}`)
 }
 </script>
 
@@ -22,7 +23,7 @@ function goToBlog(blogPath) {
     variant="elevated"
     color="#5b5bff"
     hover
-    @click="goToBlog('blogPath')"
+    @click="goToBlog(path)"
   >
   </v-card>
 </template>

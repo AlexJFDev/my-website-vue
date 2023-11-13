@@ -7,9 +7,10 @@ import { blogData } from '../blogData';
   <div class="blog-card-container">
     <BlogCard 
       v-for="blog in blogData"
-      :key="blog.title"
+      :key="blog.path"
       :title="blog.title"
       :subtitle="blog.subtitle"
+      :path="blog.path"
     ></BlogCard>
   </div>
 </template>
