@@ -3,6 +3,11 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter()
 
+defineProps({
+  title: String,
+  subtitle: String
+})
+
 function goToBlog(blogPath) {
   router.push(`/blog/${blogPath}`)
 }
@@ -12,9 +17,8 @@ function goToBlog(blogPath) {
   <v-card
     width="200"
     height="200"
-    title="Blog Title"
-    subtitle="Text from blog"
-    text="Prob not use"
+    :title="title"
+    :subtitle="subtitle"
     variant="elevated"
     color="#5b5bff"
     hover
