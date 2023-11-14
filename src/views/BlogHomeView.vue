@@ -6,11 +6,11 @@ import { blogData } from '../blogData';
 <template>
   <div class="blog-card-container">
     <BlogCard 
-      v-for="blog in blogData"
-      :key="blog.path"
-      :title="blog.title"
-      :subtitle="blog.subtitle"
-      :path="blog.path"
+      v-for="(data, path) in blogData"
+      :key="path"
+      :title="data.title"
+      :subtitle="data.subtitle"
+      :path="path"
     ></BlogCard>
   </div>
 </template>
