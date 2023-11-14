@@ -14,10 +14,10 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           echo ***Updating Path***
-          export PATH="$PATH:~/.nvm/versions/node/v21.1.0/bin/"
+          export PATH="$PATH:/home/alex_f/.nvm/versions/node/v21.1.0/bin/"
           echo $PATH
-          echo whereis npm
-          echo whereis node
+          whereis npm
+          whereis node
           echo ***Moving to Project Repo***
           cd ~/my-website-vue
           echo ***Pulling***
