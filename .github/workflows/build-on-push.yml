@@ -14,15 +14,15 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           echo ***Updating Path***
-          source ~/.bashrc
+          export PATH="$PATH:~/.nvm/versions/node/v21.1.0/bin/"
           echo ***Moving to Project Repo***
           cd ~/my-website-vue
           echo ***Pulling***
           git pull
           echo ***Installing Node Modules***
-          npm run install
+          nvm run install
           echo ***Building Project***
-          npm run build
+          nvm run build
           echo ***Updating Webpages***
           rm -rf /var/www/html
           cp -rT ~/my-website-vue/dist /var/www/html
