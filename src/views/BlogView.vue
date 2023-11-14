@@ -1,6 +1,7 @@
 <script setup>
+import MarkdownBlock from '../components/MarkdownBlock.vue';
 </script>
 
 <template>
-  This is a blog
+  <MarkdownBlock rawMarkdown="# heading"></MarkdownBlock>
 </template>
