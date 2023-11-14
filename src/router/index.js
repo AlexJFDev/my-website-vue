@@ -10,6 +10,10 @@ const router = createRouter({
       component: AboutView
     },
     {
+      path: '/:pathMatch(.*)*',
+      component: () => import('../views/Error404View.vue')
+    },
+    {
       path: '/blog',
       name: 'blog',
       component: () => import('../views/BlogHomeView.vue')
