@@ -20,9 +20,9 @@ jobs:
           echo ***Pulling***
           git pull
           echo ***Installing Node Modules***
-          yarn install
+          npm run install
           echo ***Building Project***
-          yarn build
+          npm run build
           echo ***Updating Webpages***
           rm -rf /var/www/html
           cp -rT ~/my-website-vue/dist /var/www/html
