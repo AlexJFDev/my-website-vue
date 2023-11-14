@@ -15,14 +15,15 @@ jobs:
         script: |
           echo ***Updating Path***
           export PATH="$PATH:~/.nvm/versions/node/v21.1.0/bin/"
+          echo $PATH
           echo ***Moving to Project Repo***
           cd ~/my-website-vue
           echo ***Pulling***
           git pull
           echo ***Installing Node Modules***
-          nvm run install
+          npm run install
           echo ***Building Project***
-          nvm run build
+          npm run build
           echo ***Updating Webpages***
           rm -rf /var/www/html
           cp -rT ~/my-website-vue/dist /var/www/html
