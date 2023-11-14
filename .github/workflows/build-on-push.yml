@@ -1,0 +1,28 @@
+name: build on push
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          echo ***Updating Path***
+          export PATH="$PATH:~/.nvm/versions/node/v21.1.0/bin/"
+          echo ***Moving to Project Repo***
+          cd ~/my-website-vue
+          echo ***Pulling***
+          git pull
+          echo ***Installing Node Modules***
+          yarn install
+          echo ***Building Project***
+          yarn build
+          echo ***Updating Webpages***
+          rm -rf /var/www/html
+          cp -rT ~/my-website-vue/dist /var/www/html
