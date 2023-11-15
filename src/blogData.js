@@ -1,6 +1,7 @@
 import { reactive } from "vue";
 
 export const blogData = reactive({
+    // Because Markdown uses 4 spaces as tab, this file will also use 4 spaces instead of 2.
     // Template
     /*'name': {
         title: 'title',
@@ -116,7 +117,7 @@ This method is less conventional but it seems to be slightly faster.
 I call this method "factorizing". Every letter is associated with a different prime number ({"a":2,"b":3,"c":5,...}). The algorithm finds all the prime numbers of a word and multiplies them together. Anagrams will always have the same prime numbers and therefore the same product.  
 This method works because each number has a unique set of prime factors.`,
         date: '11/11/2022',
-        tags: 'computer-science school high-school'
+        tags: 'computer-science school high-school python'
     },
     'octal-and-hex-numbers': {
         title: 'Octal and Hexadecimal Numbers',
@@ -128,7 +129,7 @@ For example, the binary instruction 10011011 is represented as 223 in octal. In 
 Instead of using Octal you could also use Hexadecimal to represent Altair instructions. In my opinion this is better since two Hexadecimal digits, representing four bits each fit neatly into the Altair's eight bit instructions the only problem with using Hexadecimal is that the Altair's manual uses Octal meaning that you'll have to convert from Octal to Hex frequently.  
 The previous example, 10011011, is represented as 9B.`,
         date: '9/1/2021',
-        tags: 'computer-science school high-school'
+        tags: 'computer-science school high-school python'
     },
     'saving-data': {
         title: 'Saving Data',
@@ -158,9 +159,9 @@ Solid State Drives use flash chips to store data. This makes them faster but mor
     },
     'gardening': {
         title: 'Gardening',
-        subtitle: 'subtitle',
+        subtitle: 'Last year I started a garden in my backyard and after having decent success with it decided that I start another garden this year.',
         content: `# Gardening
-Last year I started a garden in my backyard (which I will write about in the future) and after having decent success with it decided that I start another garden this year. My garden is located in my families backyard in a corner that, last year, I had cleared from bushes, vines, and weeds. My goal for this years garden was to expand, plant more plants, and do a better job of keeping up with weeding and watering. I've done an alright job of keeping up to these goals though it hasn't been as good as I had hoped.  
+Last year I started a garden in my backyard and after having decent success with it decided that I start another garden this year. My garden is located in my families backyard in a corner that, last year, I had cleared from bushes, vines, and weeds. My goal for this years garden was to expand, plant more plants, and do a better job of keeping up with weeding and watering. I've done an alright job of keeping up to these goals though it hasn't been as good as I had hoped.  
 The biggest change between this year and last is probably in the chicken wire fence that I put up around my garden to protect it from animals. When I put up the fence last year I was rushed and did a bad job of it. By the start of this summer the fence was in pretty bad shape. What I did was to take the whole fence down and then take my time putting it back up. To provide a structure for the fence to rest on I used bamboo stakes that I'd driven several feet into the ground. Compared to my fence from last year the new one has held up a lot better. I've also incorporated a "gate" into it which makes it easier to bring things like the lawnmower into my garden space  
 I also have some different plants from what I have last year. Last year I planted corn, tomatoes, carrots, cantaloupe, and watermelon. This year I have corn, tomatoes (some of which are volunteers descended from last years), cucumber, chard, an unknown variety of melon or squash, basil, mint (volunteers), and dill. Additionally there were a lot of seeds that I planted that never sprouted that had come from my grandmothers collection of seeds. These seeds from my grandmother were very old and had gone bad. I had also tried planting peppers from seeds that I had received as a gift last year but those had gone bad too.  
 ***
@@ -174,6 +175,100 @@ I also have some different plants from what I have last year. Last year I plante
 #### Testing old seeds. From all these different kinds of seeds only one was good.
 ![Testing old seeds. From all these different kinds of seeds only one was good.](https://i.imgur.com/cLj6HJG.jpeg "Testing old seeds. From all these different kinds of seeds only one was good.")`,
         date: '7/22/2022',
-        tags: 'gardening outdoors'
-    }
+        tags: 'gardening outdoors hobbies'
+    },
+    'java-dates': {
+        title: 'Java Dates',
+        subtitle: 'Java has a calendar function that can be used for preforming calculations on the Date.',
+        content: `# Java Dates
+Java has a calendar function that can be used for preforming calculations on the Date.  
+## The Package
+There are 2 packages that come in java.util that work with dates. There is java.util.Date and java.util.Calendar. You should use java.util.Calendar because java.util.Date is depreciated.  
+## Getting The Instance
+Calendar is static meaning "new Calendar()" won't work. Instead you should use "Calendar.getInstance()" to get a static instance of the Calendar.  
+## This code:  
+    Calendar calendar = Calendar.getInstance();
+    String todaysDate = String.format("%tc", calendar);
+    System.out.println(todaysDate);
+    String todaysTime = String.format("%tr", calendar);
+    System.out.println(todaysTime);
+    String dayOfTheWeek = String.format("%tA", calendar);
+    System.out.println(dayOfTheWeek);
+    String month = String.format("%tB", calendar);
+    System.out.println(month);
+    String day = String.format("%tD", calendar);
+    System.out.println(day);
+    String weekMonthDay = String.format("%tA, %&lt;tB %&lt;td", calendar);
+    System.out.println(weekMonthDay);
+## Gives this output:  
+    Mon Nov 29 09:00:22 EST 2021
+    09:00:22 AM
+    Monday
+    November
+    11/29/21
+    Monday, November 29`,
+        date: '11/29/2021',
+        tags: 'computer-science school high-school java'
+    },
+    /*'java-midi-player': {
+        title: 'Java Midi Player',
+        subtitle: 'subtitle',
+        content: `# Java Midi Player
+        <a href="/files/java-midi-player.jar" download><h2>Download</a>
+        <a href="https://github.com/alexjfdev/Java-Midi-Player.jar" download><h2>Git Repo</a>
+        <p>This is a Java program that plays midi sounds from a JSON file.</p>
+        <p><a href="https://github.com/alexjfdev/Java-Midi-Player/testSong.json" download>Test Song</a></p>
+        <p>Start the program with the following command:</p>
+        <code>java -jar java-midi-player.jar</code>
+        <p>Alternatively you can just double click to run it.
+          <br>Keep in mind the program will need read permissions to work properly.
+          <br>Then click "Select a File", next select your song file, and then click open.
+          <br> The song should begin to play.
+        </p>`,
+        date: '1/10/2022',
+        tags: 'computer-science school high-school java'
+    },
+    'java-particle-simulation': {
+        title: 'Java Particle Simulation',
+        subtitle: 'subtitle',
+        content: `# Java Particle Simulation
+        <a href="/files/java-physics-simulator.jar" download><h2>Download</a>
+        <a href="/files/particleRow.ser">Sample File</a>
+        <p>This is a Java program that simulates a lot of particles simultaneously.<br>The particles bounce off of the wall and each other and a hash table is used for collisions.<br>It isn't perfect though and still needs some work.</p>
+        <p>If the file doesn't work due to "unidentified developer" on a MacOS you can run:</p><code>xattr -c java-physics-simulator.jar</code><p></p>and it will be capable of running.</p>
+        <p>Lastly it may not work properly if you are not up to date with <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java version 17</a>.</p>
+        <p>You can now load and save the state of the simulation with serialized files. I've given a sample file called particleRow.ser to try. ".ser" is the standard ending for serialized Java files but you can use any ending you'd like or none at all.</p>`,
+        date: '4/19/2022',
+        tags: 'computer-science school high-school java'
+    },
+    'minecraft-modding-part-one': {
+        title: 'Minecraft Modding Part One',
+        subtitle: 'subtitle',
+        content: `# Minecraft Modding Part One
+        <p>Several months ago. Probably about 9 or 10 I started working on a Minecraft mod. The idea started as a joke in my Java programming class between 2 other friends that we develop the mod and present it to our teacher who wasn't very knowledgeable on these sorts of things. I worked on it a little but eventually lost interest and my friends contributed basically nothing to the project. Eventually we decided on working on a "Java Algebra System" which ended up being an overly ambitious project.</p>
+        <p>That original mod I gave the uncreative name of "Vanilla Improvements: Agriculture". When I submitted the version 0.0.1-alpha to upload onto Curseforge (the leading website for mod hosting) it was denied basically for being uncreative. This was also around when I lost interest.</p>
+        <p>Fast forward to this week when I regained interest in the project. The first thing that I did was to sit down and rethink the name for my mod. Since the mod has remained agriculture themed I knew that the name should be related. Eventually I came up with "Homegrown". I came up with the name by googling "synonyms for 'rustic' (a mod that this project is inspired by)" and found the word "homespun" from there it wasn't hard to come up with the name "Homegrown" and another google search showed me that there was no other mod with that name.</p>
+        <p>After coming up with a new name I began tackling the bugs and incomplete features that I had previously filed as issues. The first problem to be solved (and with the least hassle) was the one that I had been having the most difficulty with previously. Within the first day or so of starting work back up on my mod I had fixed the issue. I slowly worked my way through the remaining bugs and then began updating textures, adding more post blocks (you'll understand if you check out the mod), and attempting to get my Cantaloupes to generate naturally.</p>
+        <p>Generating my Cantaloupes proved to be the most difficult issue to solve. I first tried adding the "features" (a technical Minecraft term) in code following along with the tutorial on the Fabric website. Eventually I realized that this tutorial was out of date and I was told to try adding my Cantaloupes a different way with something called a Datapack. But, this had it's own issues first requiring me to update my Minecraft version (a hassle) and then it still didn't work. Eventually after reading the wiki page about Datapacks I realized that I was missing another file but it still didn't work. I resolved to work on solving other problems until eventually I was left with just the Cantaloupes. With fresh eyes I realized that there was a second file that was missing from my Datapack. Once I included this file (actually 3 files) everything worked properly and I built version 0.0.1-beta of my mod.</p>
+        <p>My mod can be found at <a href="https://www.curseforge.com/minecraft/mc-mods/homegrown">this link</a> if you'd like to check it out.</p>`,
+        date: '7/15/2022',
+        tags: 'computer-science hobbies minecraft java'
+    },
+    'minecraft-modding-part-two': {
+        title: 'Minecraft Modding Part Two',
+        subtitle: 'subtitle',
+        content: `# Minecraft Modding Part Two
+        <p>After releasing version 0.0.1-beta of Homegrown (which I released improperly so no one could see it) I started working on the next update to Homegrown: 0.1.0-beta. My primary focus for this update was to add corn and clean up my code. Similarly to tomatoes (and the other post blocks I will eventually add) my idea for Corn was nothing like a vanilla block. In Homegrown corn has the following traits:</p>
+        <ul>
+          <li>It starts as block but grows into two. This means when it is one block tall, the block above it must be air and when one half is broken the other must break too.</li>
+          <li>Despite growing more than one block tall it doesn't require a post to grow on.</li>
+          <li>Corn is collected by breaking the crop.</li>
+        </ul>
+        <p>This first trait, being two blocks tall with extra special properties, was the hardest to implement. I started by looking at some of the blockstate code for tall grass from Vanilla Minecraft and then copied some of the code from the tomato crop since they have some similar behaviors. Then I worked on how the crop would grow.</p>
+        <p>Firstly it has to be sensitive to the block above it when the crop is planted. It must be air and stay that way until the corn grows taller. My first attempt at implementing this used the wrong method (whenPlanted) instead of (canPlaceAt) this caused crashes because of conditions under which the game calls the methods. After solving this problem I started to work on the crop growth.</p>
+        <p>Initially, once the top half sprouted from the bottom the two halves grew separately. To solve this problem I made it so that the top half would not receive random ticks (with the ticksRandomly method) and instead would grow by checking the age of the lower half every time it got a block update. Basically, this keeps the two halves of the corn the same age.</p>
+        <p>Overall, implementing corn was much easier than implementing tomatoes. That's probably because of the code I was able to copy and the fact that I have more experience modding now. The most difficult part might have actually been deciding where corn should come from. Corn is descended from Teosinte, a plant native to Central Mexico. There's not really an environment similar to this in Minecraft so I spent a while thinking about it. Eventually I decided that that the Badlands would be the best biome for the seeds to come from and that is where it can be gotten now.</p>`,
+        date: '7/19/2022',
+        tags: 'computer-science hobbies minecraft java'
+    },*/
 })
