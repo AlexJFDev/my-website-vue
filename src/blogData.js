@@ -212,9 +212,9 @@ Calendar is static meaning "new Calendar()" won't work. Instead you should use "
     },
     'minecraft-modding-part-one': {
         title: 'Minecraft Modding Part One',
-        subtitle: 'subtitle',
+        subtitle: 'Several months ago, Probably about 9 or 10, I started working on a Minecraft mod.',
         content: `# Minecraft Modding Part One
-Several months ago. Probably about 9 or 10 I started working on a Minecraft mod. The idea started as a joke in my Java programming class between 2 other friends that we develop the mod and present it to our teacher who wasn't very knowledgeable on these sorts of things. I worked on it a little but eventually lost interest and my friends contributed basically nothing to the project. Eventually we decided on working on a "Java Algebra System" which ended up being an overly ambitious project.  
+Several months ago, Probably about 9 or 10, I started working on a Minecraft mod. The idea started as a joke in my Java programming class between 2 other friends that we develop the mod and present it to our teacher who wasn't very knowledgeable on these sorts of things. I worked on it a little but eventually lost interest and my friends contributed basically nothing to the project. Eventually we decided on working on a "Java Algebra System" which ended up being an overly ambitious project.  
 That original mod I gave the uncreative name of "Vanilla Improvements: Agriculture". When I submitted the version 0.0.1-alpha to upload onto Curseforge (the leading website for mod hosting) it was denied basically for being uncreative. This was also around when I lost interest.  
 Fast forward to this week when I regained interest in the project. The first thing that I did was to sit down and rethink the name for my mod. Since the mod has remained agriculture themed I knew that the name should be related. Eventually I came up with "Homegrown". I came up with the name by googling "synonyms for 'rustic' (a mod that this project is inspired by)" and found the word "homespun" from there it wasn't hard to come up with the name "Homegrown" and another google search showed me that there was no other mod with that name.  
 After coming up with a new name I began tackling the bugs and incomplete features that I had previously filed as issues. The first problem to be solved (and with the least hassle) was the one that I had been having the most difficulty with previously. Within the first day or so of starting work back up on my mod I had fixed the issue. I slowly worked my way through the remaining bugs and then began updating textures, adding more post blocks (you'll understand if you check out the mod), and attempting to get my Cantaloupes to generate naturally.  
@@ -225,7 +225,7 @@ My mod can be found at [this link](https://www.curseforge.com/minecraft/mc-mods/
     },
     'minecraft-modding-part-two': {
         title: 'Minecraft Modding Part Two',
-        subtitle: 'subtitle',
+        subtitle: 'After releasing version 0.0.1-beta of Homegrown (which I released improperly so no one could see it) I started working on the next update to Homegrown: 0.1.0-beta.',
         content: `# Minecraft Modding Part Two
 After releasing version 0.0.1-beta of Homegrown (which I released improperly so no one could see it) I started working on the next update to Homegrown: 0.1.0-beta. My primary focus for this update was to add corn and clean up my code. Similarly to tomatoes (and the other post blocks I will eventually add) my idea for Corn was nothing like a vanilla block. In Homegrown corn has the following traits:  
     - It starts as block but grows into two. This means when it is one block tall, the block above it must be air and when one half is broken the other must break too.  
