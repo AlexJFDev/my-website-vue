@@ -238,4 +238,39 @@ Overall, implementing corn was much easier than implementing tomatoes. That's pr
         date: '7/19/2022',
         tags: 'computer-science hobbies minecraft java'
     },
+    'goals-for-2024': {
+        title: 'Goals for 2024',
+        subtitle: 'Going into 2024, I have set several self-improvement goals.',
+        content: `# Goals for 2024
+Going into 2024, I have set several self-improvement goals. I would like to:  
+    - Sleep better  
+    - Cut 20 pounds of body weight  
+    - Strictly manage my time  
+    - Read more  
+    - Finish my website and post weekly blogs  
+### Sleeping better
+This is one of the easiest goals to achieve. Since the start of November, I have been having difficulty getting to sleep at a good time. I have gone to bed after 1 AM almost every night since then. Obviously, this isn't a good habit to keep, especially when I have class at 9 AM 3 days every week. 
+Achieving this goal requires getting into bed at a better time and addressing the issues that are causing my mind to wander when I'm trying to fall asleep. So far, I haven't made any progress on this goal.
+### Cutting weight
+Currently, I weigh about 190 pounds. Cutting 20 pounds will bring me down to 170. Over a year, I think this is a very manageable goal. But, it will require me to be more careful about what I eat and to exercise regularly. 
+I don't think I need to follow a strict diet, but I should be making more careful choices about what I eat. Getting exercise isn't difficult either especially if I am involved in club sports. Currently, I am doing club Lacrosse and I plan to start doing club swim soon also. On the days I don't have sports practice, I can go to the gym at my university.
+### Time management
+This goal might prove to be the most difficult for me. It requires me to make an effort at the start of every day, week, and month to plan out what I have going on in that period and then follow through with that plan. Last semester, I wanted to do the same thing and it never really worked out.
+### Reading more
+This goal should be easy if I can successfully manage my time. I just need to set aside time to read and then actually read during that time, not scroll through TikTok or Instagram Reels.
+### Finishing my Website
+This has been my longest-running goal on my list, especially posting weekly blogs. Making weekly blogs has been something I have wanted to do for over a year and a half and hopefully, I can make it happen this year.
+Unfortunately, this goal is off to a rocky start. This blog post is intended to be for January 7th, but I'm writing it on January 13th.`,
+        date: '1/07/2024',
+        tags: 'school college personal-development'
+    },
+    'starting-school-2024': {
+        title: 'Starting School',
+        subtitle: 'I started my second semester of school at Christopher Newport University on Monday.',
+        content: `Starting school
+I started my second semester of school at Christopher Newport University on Monday. I am happy with my schedule and like last semester, none of my classes seem like they'll be too difficult. The only class I was worried about was Physics 152 but many of my classmates took 151 last semester with the same professor and they all said that he was very easy.
+Socially, things have been going well too. I have seen most of my friends from last semester, but I'm still trying to find a solid friend group. I think I need to improve my confidence a little more, but that is completely achievable.
+Lastly, I've done a decent job of achieving my goals since coming back to campus. I've been to the gym every day except when I had lacrosse practice and I am not snacking like I was at home. I have been planning my time every day and have done a decent job of executing that plan. Unfortunately, I haven't read every day and I'm not sleeping much better. 
+Overall, I think it's been a pretty good start to the semester.`
+    }
 })
