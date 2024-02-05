@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 
 <template>
   <v-app>
-    <v-navigation-drawer>
+    <v-navigation-drawer permanent>
       <v-list-item title="alexjf.dev" subtitle="Welcome to my website!" />
       <v-divider />
       <v-list-item
@@ -16,8 +16,9 @@ import { RouterView } from 'vue-router'
         title="Blog"
       ></v-list-item>
       <v-list-item
-        to="/resume"
+        href="https://docs.google.com/document/d/14j_l1dUeu62DXA6XgZuLHjjRFVyi_-cUKQARoVIh2PE/edit?usp=sharing"
         title="Resume"
+        target="_blank"
       ></v-list-item>
       <v-list-item
         href="https://www.linkedin.com/in/alexander-fuhrig/"
