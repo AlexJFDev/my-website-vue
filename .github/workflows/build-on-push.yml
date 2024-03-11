@@ -15,9 +15,6 @@ jobs:
         script: |
           echo ***Updating Path***
           export PATH="$PATH:/home/githubactioner/.nvm/versions/node/v21.7.1/bin"
-          echo $PATH
-          whereis npm
-          whereis node
           echo ***Moving to Project Repo***
           cd ~/my-website-vue
           echo ***Pulling***
