@@ -23,7 +23,7 @@ jobs:
           echo ***Pulling***
           git pull
           echo ***Installing Node Modules***
-          npm run install
+          npm install
           echo ***Building Project***
           npm run build
           echo ***Updating Webpages***
