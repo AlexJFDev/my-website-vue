@@ -1,5 +1,5 @@
 name: build on push
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
 
   build:
@@ -14,16 +14,13 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           echo ***Updating Path***
-          export PATH="$PATH:/home/alex_f/.nvm/versions/node/v21.1.0/bin/"
-          echo $PATH
-          whereis npm
-          whereis node
+          export PATH="$PATH:/home/githubactioner/.nvm/versions/node/v21.7.1/bin"
           echo ***Moving to Project Repo***
           cd ~/my-website-vue
           echo ***Pulling***
           git pull
           echo ***Installing Node Modules***
-          npm run install
+          npm install
           echo ***Building Project***
           npm run build
           echo ***Updating Webpages***
