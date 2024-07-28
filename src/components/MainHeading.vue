@@ -9,6 +9,6 @@
 
 <style>
 .heading-container {
-  color: #5b5bff;
+  color: var(--color-primary);
 }
 </style>
