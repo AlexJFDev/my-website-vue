@@ -21,7 +21,7 @@ const router = createRouter({
     },
     {
       path: '/blog/:blogName',
-      component: () => import('../views/BlogView.vue')
+      component: () => import('../views/BlogPostView.vue')
     },
     {
       path: '/resume',
