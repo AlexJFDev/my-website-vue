@@ -1,11 +1,15 @@
 <script setup>
 import { RouterView } from 'vue-router'
+
+import { useDisplay } from 'vuetify'
+
+const { mobile } = useDisplay()
 </script>
 
 <template>
   <v-app>
-    <v-navigation-drawer class="nav-drawer" permanent>
-      <v-list-item class="nav-title" title="alexjf.dev" subtitle="Welcome to my website!" />
+    <v-navigation-drawer :permanent="!mobile">
+      <v-list-item class="nav-drawer-title" title="alexjf.dev" subtitle="Welcome to my website!" />
       <v-list-item
         to="/"
         title="About Me"
@@ -30,9 +34,9 @@ import { RouterView } from 'vue-router'
         target="_blank"
       ></v-list-item>
     </v-navigation-drawer>
+    <v-app-bar :title="name"></v-app-bar>
     <v-main class="main">
-      <div class="top-bar"></div>
-      <div class="content-container">
+      <div class="content pa-2">
         <RouterView></RouterView>
       </div>
     </v-main>
@@ -40,37 +44,24 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-.nav-drawer {
-  .nav-title {
-    height: var(--top-bar_height);
-    border-color: var(--color-secondary);
-    border-style: solid;
-    border-width: 0 0 1px 0;
-  }
+.nav-drawer-title {
+  height: var(--app-bar_height);
+
+  border-color: var(--color_secondary);
+  border-style: solid;
+  border-width: 0 0 1px 0;
 }
 .main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  .top-bar {
-    width: 100%;
-    height: var(--top-bar_height);
-
-    border-color: var(--color-secondary);
-    border-style: solid;
-    border-width: 0 0 1px 0;
-  }
-  .content-container {
-    padding: 16px;
-
+  justify-content: center;
+  .content {
+    height: 100%;
     width: 100%;
     max-width: var(--content_width);
-    height: 100%;
 
-
-    border-color: var(--color-secondary);
+    border-color: var(--color_secondary);
     border-style: solid;
-    border-width: 1px;
+    border-width: 0 1px 0 1px;
   }
 }
 </style>
