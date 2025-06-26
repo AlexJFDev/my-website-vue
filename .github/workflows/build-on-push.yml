@@ -1,5 +1,10 @@
 name: build on push
-on: [push, workflow_dispatch]
+on: 
+  push:
+    branches:
+      - production
+  workflow_dispatch:
+
 jobs:
 
   build:
@@ -17,8 +22,10 @@ jobs:
           export PATH="$PATH:/home/githubactioner/.nvm/versions/node/v21.7.1/bin"
           echo ***Moving to Project Repo***
           cd ~/my-website-vue
-          echo ***Pulling***
-          git pull
+          echo ***Pulling from production***
+          git fetch origin production
+          git checkout production
+          git reset --hard origin/production
           echo ***Installing Node Modules***
           npm install
           echo ***Building Project***
