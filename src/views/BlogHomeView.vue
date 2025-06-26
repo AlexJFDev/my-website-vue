@@ -11,15 +11,15 @@ import { blogData } from '../blogData';
       :title="data.title"
       :subtitle="data.subtitle"
       :path="path"
+      :date="data.date"
     ></BlogCard>
   </div>
 </template>
 
 <style>
 .blog-card-container {
-  width: auto;
-  display: grid;
+  display: flex;
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, 200px);
+  flex-direction: column;
 }
 </style>
