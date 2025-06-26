@@ -4,7 +4,7 @@ import { blogData } from '../blogData';
 </script>
 
 <template>
-  <div class="blog-card-container">
+  <div class="d-flex ga-2 flex-column">
     <BlogCard 
       v-for="(data, path) in blogData"
       :key="path"
@@ -17,9 +17,4 @@ import { blogData } from '../blogData';
 </template>
 
 <style>
-.blog-card-container {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
 </style>
