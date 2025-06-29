@@ -12,6 +12,7 @@ import { blogData } from '../blogData';
       :blurb="data.subtitle"
       :path="path"
       :date="data.date"
+      :tags="data.tags"
     ></BlogCard>
   </div>
 </template>

@@ -20,14 +20,15 @@ const props = defineProps({
     type: String,
     required: true
   },
-  topics: {
+  tags: {
     type: Array,
     required: false,
     default: () => []
   },
   image: {
     type: String,
-    required: false
+    required: false,
+    default: ""
   },
   color: {
     type: String,
@@ -54,15 +55,27 @@ function openBlog() {
     :color="color"
     hover
     @click="openBlog()"
+    :width="compact ? '200' : ''"
   >
     <v-card-item>
       <div class="d-flex flex-row justify-space-between">
         <v-card-title>{{ title}}</v-card-title>
-        <div class="text-overline mb-1 text-right">
+        <div
+          v-if="!compact"
+          class="text-overline mb-1 text-right"
+        >
           {{ date }}
         </div>
       </div>
-      <v-card-subtitle>{{ blurb }}</v-card-subtitle>
+      <v-card-subtitle v-if="!compact">{{ blurb }}</v-card-subtitle>
+      <div class="d-flex ga-1">
+        <v-chip
+          v-for="tag in tags"
+          :key="tag"
+        >
+          {{ tag }}
+        </v-chip>
+      </div>
     </v-card-item>
   </v-card>
 </template>
