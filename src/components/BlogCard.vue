@@ -28,6 +28,16 @@ const props = defineProps({
   image: {
     type: String,
     required: false
+  },
+  color: {
+    type: String,
+    required: false,
+    default: "blue-lighten-2"
+  },
+  compact: {
+    type: Boolean,
+    required: false,
+    default: false
   }
 })
 
@@ -41,20 +51,18 @@ function openBlog() {
     class="blog-card"
     height="200"
     variant="elevated"
-    color="#5b5bff"
+    :color="color"
     hover
     @click="openBlog()"
   >
     <v-card-item>
-      <div>
+      <div class="d-flex flex-row justify-space-between">
+        <v-card-title>{{ title}}</v-card-title>
         <div class="text-overline mb-1 text-right">
           {{ date }}
         </div>
-        <div class="text-h6 mb-1">
-          {{ title}}
-        </div>
-        <div class="text-caption">{{ blurb }}</div>
       </div>
+      <v-card-subtitle>{{ blurb }}</v-card-subtitle>
     </v-card-item>
   </v-card>
 </template>
