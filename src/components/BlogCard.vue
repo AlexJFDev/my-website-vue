@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router';
+import DateLabel from './DateLabel.vue';
 
 const router = useRouter()
 
@@ -59,19 +60,16 @@ function openBlog() {
   >
     <v-card-item>
       <div class="d-flex flex-row justify-space-between">
-        <v-card-title>{{ title}}</v-card-title>
-        <div
-          v-if="!compact"
-          class="text-overline mb-1 text-right"
-        >
-          {{ date }}
-        </div>
+        <p class="text-h6">{{ title}}</p>
+        <DateLabel v-if="!compact" :date="date"/>
       </div>
-      <v-card-subtitle v-if="!compact">{{ blurb }}</v-card-subtitle>
-      <div class="d-flex ga-1">
+      <p v-if="!compact" class="text-subtitle-1">{{ blurb }}</p>
+      <div class="d-flex ga-1 flex-wrap">
         <v-chip
           v-for="tag in tags"
           :key="tag"
+          variant="outlined"
+          :size="compact ? 'small' : 'default'"
         >
           {{ tag }}
         </v-chip>
