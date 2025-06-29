@@ -30,3 +30,6 @@ $SERVER["socket"] == ":443" {
 This repo makes use of GitHub actions to deploy updates. Whenever a commit is made to the `production` branch, my Linode is automatically SSHed into, the latest version of the repo is built, node build is run, and the build result is copied to the correct folder.
 ## Branch Protection
 `development` and `production` are branch protected. This means that commits cannot be made to them without a pull request. This forces me to follow the [Git Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
+
+# Management
+I am using a GitHub project and issues to manage the development of this website. The project board is linked here: [https://github.com/users/AlexJFDev/projects/1](https://github.com/users/AlexJFDev/projects/1).
