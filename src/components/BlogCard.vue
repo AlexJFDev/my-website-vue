@@ -50,7 +50,7 @@ function openBlog() {
 
 <template>
   <v-card
-    class="blog-card"
+    class="d-flex flex-column"
     height="200"
     variant="elevated"
     :color="color"
@@ -58,12 +58,16 @@ function openBlog() {
     @click="openBlog()"
     :width="compact ? '200' : ''"
   >
-    <v-card-item>
-      <div class="d-flex flex-row justify-space-between">
-        <p class="text-h6">{{ title}}</p>
-        <DateLabel v-if="!compact" :date="date"/>
+    <v-card-text>
+      <div class="d-flex flex-column ga-1">
+        <div class="d-flex justify-space-between">
+          <p class="text-h6">{{ title}}</p>
+          <DateLabel v-if="!compact" :date="date"/>
+        </div>
+        <p v-if="!compact" class="text-subtitle-1">{{ blurb }}</p>
       </div>
-      <p v-if="!compact" class="text-subtitle-1">{{ blurb }}</p>
+    </v-card-text>
+    <v-card-actions>
       <div class="d-flex ga-1 flex-wrap">
         <v-chip
           v-for="tag in tags"
@@ -74,6 +78,6 @@ function openBlog() {
           {{ tag }}
         </v-chip>
       </div>
-    </v-card-item>
+    </v-card-actions>
   </v-card>
 </template>
