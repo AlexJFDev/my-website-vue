@@ -7,8 +7,8 @@ export const blogData = reactive({
         title: 'title',
         subtitle: 'subtitle',
         content: `# Content`,
-        date: '01/1/0001',
-        tags: 'tag'
+        date: 'MM/DD/YYYY',
+        tags: ['tag1', 'tag2']
     },*/
     'what-is-capstone': {
         title: 'What is Capstone',
@@ -128,7 +128,7 @@ The Altair uses an eight bit binary input. Since writing out eight digits for ev
 For example, the binary instruction 10011011 is represented as 223 in octal. In normal decimal it is 155.  
 Instead of using Octal you could also use Hexadecimal to represent Altair instructions. In my opinion this is better since two Hexadecimal digits, representing four bits each fit neatly into the Altair's eight bit instructions the only problem with using Hexadecimal is that the Altair's manual uses Octal meaning that you'll have to convert from Octal to Hex frequently.  
 The previous example, 10011011, is represented as 9B.`,
-        date: '09/1/2021',
+        date: '09/01/2021',
         tags: ['computer-science', 'school', 'high-school', 'python']
     },
     'saving-data': {
@@ -154,7 +154,7 @@ Storage can be used for data that does not to be accessed as quickly and for the
 Hard Disk Drives are a kind of storage that use magnetic discs to save data. The discs spin around inside the drive and an arm reads and writes data by changing the polarity of sections of the disc.  
 ### Solid State Drives
 Solid State Drives use flash chips to store data. This makes them faster but more expensive than HDDs. However, the difference in price between the two kinds of storage is shrinking and SSDs are frequently used in place of HDDs.`,
-        date: '11/7/2022',
+        date: '11/07/2022',
         tags: ['computer-science', 'school', 'high-school']
     },
     'gardening': {
