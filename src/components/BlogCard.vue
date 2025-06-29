@@ -60,7 +60,7 @@ function openBlog() {
   >
     <v-card-text>
       <div class="d-flex flex-column ga-1">
-        <div class="d-flex justify-space-between">
+        <div class="d-flex justify-space-between align-center">
           <p class="text-h6">{{ title}}</p>
           <DateLabel v-if="!compact" :date="date"/>
         </div>

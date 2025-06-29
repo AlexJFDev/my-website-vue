@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-overline border rounded border-opacity-100">
+  <div class="border rounded border-opacity-100 d-flex align-center pa-1" style="height: 22px;">
     {{ date }}
   </div>
 </template>
