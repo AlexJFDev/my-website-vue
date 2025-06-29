@@ -17,7 +17,7 @@ export const blogData = reactive({
 Capstone is a special program for seniors at my high school. Each student has an internship, job, or some other kind of training experience. Students do their Capstone every day after school. For my Capstone I am working in the IT department at a local research institution.  
 Part of the curriculum requires me to write about my experiences or answer a prompt every month so I am posting these writings here.`,
         date: '9/30/22',
-        tags: 'capstone school high-school'
+        tags: ['capstone', 'school', 'high-school']
     },
     'december-capstone': {
         title: 'December Capstone Journal',
@@ -27,7 +27,7 @@ This month I was asked to write about the technical skills that I've used at my 
 So far, I have had a lot of programming to do. In particular I have been writing powershell scripts to automate computer setup. I learned about scripting in my 10th grade class when we learned Python. The syntax for Powershell is more primitive but logically it works the same as python. Both languages are also object oriented.  
 More generally I've used my skills in algorithms as well. I wrote an algorithm in JavaScript for a webpage and have made algorithms for my PowerShell scripts too. The JavaScript algorithm was pretty simple but the PowerShell one was more advanced. The Powershell script takes a JSON file and uses it to update registry entries. It uses conditional statements, guard clauses, and for loops.`,
         date: '12/14/22',
-        tags: 'capstone school high-school'
+        tags: ['capstone', 'school', 'high-school']
     },
     'november-capstone': {
         title: 'November Capstone Journal',
@@ -38,7 +38,7 @@ Overall my Capstone has gone pretty smoothly and I haven't encountered any major
 The first issue I ran into was during my conference room inspections. The microphone on one of the computers I looked at was not working. When some basic troubleshooting didn't fix it I let my manager know. A few days later, my manager and I checked the problem out together. The microphone still wasn't working. Eventually, my manager found the microphone in a cabinet at the back of the room. Someone had unplugged it and put it there.  
 This experience taught me more about troubleshooting. I learned what to do when I can't solve a problem and that it is okay to ask my manager for help.`,
         date: '11/30/22',
-        tags: 'capstone school high-school'
+        tags: ['capstone', 'school', 'high-school']
     },
     'october-capstone': {
         title: 'October Capstone Journal',
@@ -48,7 +48,7 @@ This month I was asked to write about what I am doing to have a successful exper
 My main support at my Capstone organization is my supervisor. He has done the onboarding process with me and he is meant to be my first contact for any questions or issues that I have. Secondary support might be my dad; he also works at my Capstone organization but is in a different department.  
 To be successful in my Capstone I am trying to show initiative. One way I can demonstrate initiative is by asking lots of questions. This shows my interest and that I am paying attention to what I am being told. I can showcase my skills by speaking up when I am familiar with a concept and doing tasks on my own without needing guidance. This could apply to my skills in programming, networking, and use.`,
         date: '10/25/22',
-        tags: 'capstone school high-school'
+        tags: ['capstone', 'school', 'high-school']
     },
     'altair-assembler': {
         title: 'Altair Assembler',
@@ -61,7 +61,7 @@ The Assembler takes text files as input and outputs binary files. I like to give
 ## Technical details
 The assembler reads input files one line at a time and one instruction is allowed per line. It starts by finding the instruction name, which should be at the start, and then looks that instruction up in a dictionary (hash table). If the instruction isn't found an error is thrown and the program stops. After this the arguments are found and then passed into a method for the instruction to generate its bytecode. When compilation is finished all the bytes are saved into an output file.`,
         date: '9/14/2022',
-        tags: 'computer-science school high-school'
+        tags: ['computer-science', 'school', 'high-school']
     },
     'anagram-algorithms': {
         title: 'Anagram Algorithms',
@@ -117,7 +117,7 @@ This method is less conventional but it seems to be slightly faster.
 I call this method "factorizing". Every letter is associated with a different prime number ({"a":2,"b":3,"c":5,...}). The algorithm finds all the prime numbers of a word and multiplies them together. Anagrams will always have the same prime numbers and therefore the same product.  
 This method works because each number has a unique set of prime factors.`,
         date: '11/11/2022',
-        tags: 'computer-science school high-school python'
+        tags: ['computer-science', 'school', 'high-school', 'python']
     },
     'octal-and-hex-numbers': {
         title: 'Octal and Hexadecimal Numbers',
@@ -129,7 +129,7 @@ For example, the binary instruction 10011011 is represented as 223 in octal. In 
 Instead of using Octal you could also use Hexadecimal to represent Altair instructions. In my opinion this is better since two Hexadecimal digits, representing four bits each fit neatly into the Altair's eight bit instructions the only problem with using Hexadecimal is that the Altair's manual uses Octal meaning that you'll have to convert from Octal to Hex frequently.  
 The previous example, 10011011, is represented as 9B.`,
         date: '9/1/2021',
-        tags: 'computer-science school high-school python'
+        tags: ['computer-science', 'school', 'high-school', 'python']
     },
     'saving-data': {
         title: 'Saving Data',
@@ -155,7 +155,7 @@ Hard Disk Drives are a kind of storage that use magnetic discs to save data. The
 ### Solid State Drives
 Solid State Drives use flash chips to store data. This makes them faster but more expensive than HDDs. However, the difference in price between the two kinds of storage is shrinking and SSDs are frequently used in place of HDDs.`,
         date: '11/7/2022',
-        tags: 'computer-science school high-school'
+        tags: ['computer-science', 'school', 'high-school']
     },
     'gardening': {
         title: 'Gardening',
@@ -175,7 +175,7 @@ I also have some different plants from what I have last year. Last year I plante
 #### Testing old seeds. From all these different kinds of seeds only one was good.
 ![Testing old seeds. From all these different kinds of seeds only one was good.](https://i.imgur.com/cLj6HJG.jpeg "Testing old seeds. From all these different kinds of seeds only one was good.")`,
         date: '7/22/2022',
-        tags: 'gardening outdoors hobbies'
+        tags: ['gardening', 'outdoors', 'hobbies']
     },
     'java-dates': {
         title: 'Java Dates',
@@ -208,7 +208,7 @@ Calendar is static meaning "new Calendar()" won't work. Instead you should use "
     11/29/21
     Monday, November 29`,
         date: '11/29/2021',
-        tags: 'computer-science school high-school java'
+        tags: ['computer-science', 'school', 'high-school', 'java']
     },
     'minecraft-modding-part-one': {
         title: 'Minecraft Modding Part One',
@@ -221,7 +221,7 @@ After coming up with a new name I began tackling the bugs and incomplete feature
 Generating my Cantaloupes proved to be the most difficult issue to solve. I first tried adding the "features" (a technical Minecraft term) in code following along with the tutorial on the Fabric website. Eventually I realized that this tutorial was out of date and I was told to try adding my Cantaloupes a different way with something called a Datapack. But, this had it's own issues first requiring me to update my Minecraft version (a hassle) and then it still didn't work. Eventually after reading the wiki page about Datapacks I realized that I was missing another file but it still didn't work. I resolved to work on solving other problems until eventually I was left with just the Cantaloupes. With fresh eyes I realized that there was a second file that was missing from my Datapack. Once I included this file (actually 3 files) everything worked properly and I built version 0.0.1-beta of my mod.  
 My mod can be found at [this link](https://www.curseforge.com/minecraft/mc-mods/homegrown) if you'd like to check it out.`,
         date: '7/15/2022',
-        tags: 'computer-science hobbies minecraft java'
+        tags: ['computer-science', 'hobbies', 'minecraft', 'java']
     },
     'minecraft-modding-part-two': {
         title: 'Minecraft Modding Part Two',
@@ -236,7 +236,7 @@ Firstly it has to be sensitive to the block above it when the crop is planted. I
 Initially, once the top half sprouted from the bottom the two halves grew separately. To solve this problem I made it so that the top half would not receive random ticks (with the ticksRandomly method) and instead would grow by checking the age of the lower half every time it got a block update. Basically, this keeps the two halves of the corn the same age.  
 Overall, implementing corn was much easier than implementing tomatoes. That's probably because of the code I was able to copy and the fact that I have more experience modding now. The most difficult part might have actually been deciding where corn should come from. Corn is descended from Teosinte, a plant native to Central Mexico. There's not really an environment similar to this in Minecraft so I spent a while thinking about it. Eventually I decided that that the Badlands would be the best biome for the seeds to come from and that is where it can be gotten now.`,
         date: '7/19/2022',
-        tags: 'computer-science hobbies minecraft java'
+        tags: ['computer-science', 'hobbies', 'minecraft', 'java']
     },
     'goals-for-2024': {
         title: 'Goals for 2024',
@@ -262,7 +262,7 @@ This goal should be easy if I can successfully manage my time. I just need to se
 This has been my longest-running goal on my list, especially posting weekly blogs. Making weekly blogs has been something I have wanted to do for over a year and a half and hopefully, I can make it happen this year.
 Unfortunately, this goal is off to a rocky start. This blog post is intended to be for January 7th, but I'm writing it on January 13th.`,
         date: '1/07/2024',
-        tags: 'school college personal-development'
+        tags: ['school', 'college', 'personal-development']
     },
     'starting-school-2024': {
         title: 'Starting School',
@@ -273,7 +273,7 @@ Socially, things have been going well too. I have seen most of my friends from l
 Lastly, I've done a decent job of achieving my goals since coming back to campus. I've been to the gym every day except when I had lacrosse practice and I am not snacking like I was at home. I have been planning my time every day and have done a decent job of executing that plan. Unfortunately, I haven't read every day and I'm not sleeping much better. 
 Overall, I think it's been a pretty good start to the semester.`,
         date: '1/14/2024',
-        tags: 'school college'
+        tags: ['school', 'college']
     },
     'getting-organized': {
         title: 'Getting Organized',
@@ -291,6 +291,6 @@ Each calendar also has a number at the start of its name. Google calendar sorts 
 I try to organize my files around a central folder. On systems with a UI; I use the desktop, on systems without a UI; I usually use the user folder, and in Google Drive I use the root folder. I try to keep these top level folders free of files and have a folder for everything. I am good about this rule everywhere except Google Drive.  
 I also follow the Capitalized-Kebab-Case naming convention for my files except when I'm using something, like Java or Python, which has a different standard. This is because this naming convention is rarely used by the software and programming languages that I am familiar with so it easily lets me differentiate between what is usually code and documents, photos, or something else.`,
         date: '1/28/2024',
-        tags: 'personal-development'
+        tags: ['personal-development']
     }
 })
