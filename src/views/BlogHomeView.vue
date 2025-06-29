@@ -9,7 +9,7 @@ import { blogData } from '../blogData';
       v-for="(data, path) in blogData"
       :key="path"
       :title="data.title"
-      :subtitle="data.subtitle"
+      :blurb="data.subtitle"
       :path="path"
       :date="data.date"
     ></BlogCard>

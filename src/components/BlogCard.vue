@@ -3,15 +3,36 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter()
 
-defineProps({
-  title: String,
-  subtitle: String,
-  path: String,
-  date: String
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  blurb: {
+    type: String,
+    required: false
+  },
+  path: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: String,
+    required: true
+  },
+  topics: {
+    type: Array,
+    required: false,
+    default: () => []
+  },
+  image: {
+    type: String,
+    required: false
+  }
 })
 
-function goToBlog(path) {
-  router.push(`/blog/${path}`)
+function openBlog() {
+  router.push(`/blog/${props.path}`)
 }
 </script>
 
@@ -22,7 +43,7 @@ function goToBlog(path) {
     variant="elevated"
     color="#5b5bff"
     hover
-    @click="goToBlog(path)"
+    @click="openBlog()"
   >
     <v-card-item>
       <div>
@@ -32,7 +53,7 @@ function goToBlog(path) {
         <div class="text-h6 mb-1">
           {{ title}}
         </div>
-        <div class="text-caption">{{ subtitle }}</div>
+        <div class="text-caption">{{ blurb }}</div>
       </div>
     </v-card-item>
   </v-card>
