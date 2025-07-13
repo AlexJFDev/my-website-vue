@@ -1,39 +1,83 @@
 <script setup>
 import { useRouter } from 'vue-router';
+import DateLabel from './DateLabel.vue';
 
 const router = useRouter()
 
-defineProps({
-  title: String,
-  subtitle: String,
-  path: String,
-  date: String
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  blurb: {
+    type: String,
+    required: false
+  },
+  path: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: String,
+    required: true
+  },
+  tags: {
+    type: Array,
+    required: false,
+    default: () => []
+  },
+  image: {
+    type: String,
+    required: false,
+    default: ""
+  },
+  color: {
+    type: String,
+    required: false,
+    default: "blue-lighten-2"
+  },
+  compact: {
+    type: Boolean,
+    required: false,
+    default: false
+  }
 })
 
-function goToBlog(path) {
-  router.push(`/blog/${path}`)
+function openBlog() {
+  router.push(`/blog/${props.path}`)
 }
 </script>
 
 <template>
   <v-card
-    class="blog-card"
+    class="d-flex flex-column"
     height="200"
     variant="elevated"
-    color="#5b5bff"
+    :color="color"
     hover
-    @click="goToBlog(path)"
+    @click="openBlog()"
+    :width="compact ? '200' : ''"
   >
-    <v-card-item>
-      <div>
-        <div class="text-overline mb-1 text-right">
-          {{ date }}
+    <v-card-text>
+      <div class="d-flex flex-column ga-1">
+        <div class="d-flex justify-space-between align-center">
+          <p class="text-h6">{{ title}}</p>
+          <DateLabel v-if="!compact" :date="date"/>
         </div>
-        <div class="text-h6 mb-1">
-          {{ title}}
-        </div>
-        <div class="text-caption">{{ subtitle }}</div>
+        <p v-if="!compact" class="text-subtitle-1">{{ blurb }}</p>
       </div>
-    </v-card-item>
+    </v-card-text>
+    <v-card-actions>
+      <div class="d-flex ga-1 flex-wrap">
+        <v-chip
+          v-for="tag in tags"
+          :key="tag"
+          variant="outlined"
+          :size="compact ? 'small' : 'default'"
+        >
+          {{ tag }}
+        </v-chip>
+      </div>
+    </v-card-actions>
   </v-card>
 </template>

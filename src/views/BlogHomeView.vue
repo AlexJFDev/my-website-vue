@@ -1,6 +1,9 @@
 <script setup>
 import BlogCard from '../components/BlogCard.vue';
 import { blogData } from '../blogData';
+import { useDisplay } from 'vuetify';
+
+const { smAndDown } = useDisplay();
 </script>
 
 <template>
@@ -9,9 +12,11 @@ import { blogData } from '../blogData';
       v-for="(data, path) in blogData"
       :key="path"
       :title="data.title"
-      :subtitle="data.subtitle"
+      :blurb="data.subtitle"
       :path="path"
       :date="data.date"
+      :tags="data.tags"
+      :compact="smAndDown"
     ></BlogCard>
   </div>
 </template>
