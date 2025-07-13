@@ -79,5 +79,13 @@ function openBlog() {
         </v-chip>
       </div>
     </v-card-actions>
+    <v-img
+      v-if="image"
+      class="position-absolute w-100 h-100"
+      gradient
+      :src="image"
+      cover
+      style="z-index: -1; top: 48px; opacity: 0.75;"
+    />
   </v-card>
 </template>
