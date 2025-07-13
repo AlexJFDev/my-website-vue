@@ -17,6 +17,7 @@ const { smAndDown } = useDisplay();
       :date="data.date"
       :tags="data.tags"
       :compact="smAndDown"
+      :image="data.image"
     ></BlogCard>
   </div>
 </template>
