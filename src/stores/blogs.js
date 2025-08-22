@@ -5,11 +5,7 @@ export const useBlogStore = defineStore('blogs', {
     state: () => ({
         blogs: {}
     }),
-    getters: {
-        allBlogs: (state) => {
-            return state.blogs
-        }
-    },
+    getters: {},
     actions: {
         async fetchBlogs() {
             this.blogs = await fetchBlogs()

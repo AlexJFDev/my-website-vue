@@ -4,7 +4,7 @@ import { useDisplay } from 'vuetify';
 
 import { useBlogStore } from '../stores/blogs';
 
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 
 const blogStore = useBlogStore()
 
@@ -13,12 +13,14 @@ const { smAndDown } = useDisplay();
 onMounted(() => {
   blogStore.fetchBlogs()
 })
+
+const blogs = computed(() => blogStore.blogs)
 </script>
 
 <template>
   <div class="d-flex ga-2 flex-column">
     <BlogCard 
-      v-for="(data, path) in blogStore.allBlogs"
+      v-for="(data, path) in blogs"
       :key="path"
       :title="data.title"
       :blurb="data.subtitle"
