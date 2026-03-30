@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
-import { blogData } from '../blogData'
+import { fetchBlogs } from '../api/blogs'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,13 +32,14 @@ const router = createRouter({
 })
 
 // eslint-disable-next-line no-unused-vars
-router.beforeEach((to, from) => {
+router.beforeEach(async (to, from) => {
   let path = to.fullPath
   let splitPath = path.split('/')
   if (splitPath[1] === '') {
     document.title = 'Welcome'
   } else if (splitPath[1] === 'blog') {
-    document.title = blogData[splitPath[2]]?.title ?? 'Blog'
+    const blogs = await fetchBlogs()
+    document.title = blogs[splitPath[2]]?.title ?? 'Blog'
   } else if (splitPath[1] === 'resume') {
     document.title = 'Resume'
   } else {
