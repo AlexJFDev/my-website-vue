@@ -1,7 +1,7 @@
 export interface BlogPost {
-  title: String,
-  subtitle: String,
-  content: String,
-  date: String,
-  tags: String[]
+  title: string,
+  subtitle: string,
+  content: string,
+  date: string,
+  tags: string[]
 }
