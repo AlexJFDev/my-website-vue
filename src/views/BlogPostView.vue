@@ -10,7 +10,7 @@ const route = useRoute()
   return route.path.split('/').pop()
 })*/
 
-const blogKey = route.path.split('/').pop()
+const blogKey = route.path.split('/').pop() || ''
 
 const blogStore = useBlogStore()
 
