@@ -1,6 +1,7 @@
 import { reactive } from "vue";
+import type { BlogPost } from "./types";
 
-export const blogData = reactive({
+export const blogData = reactive<Record<string, BlogPost>>({
     // Because Markdown uses 4 spaces as tab, this file will also use 4 spaces instead of 2.
     // Template
     /*'name': {
