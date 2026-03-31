@@ -8,9 +8,13 @@ export const useBlogStore = defineStore('blogs', {
     state: () => ({
         blogs: {} as Record<string, BlogPost>
     }),
-    getters: {},
+    getters: {
+        hasBlogs: (state) => Object.keys(state.blogs).length > 0
+    },
     actions: {
-        async fetchBlogs() {
+        async fetchBlogs(forced=false) {
+            if (!forced && this.hasBlogs) return
+
             const entries = await Promise.all(
                 Object.entries(blogFiles).map(async ([path, load]) => {
                     const raw = await load() as string

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import BlogCard from '../components/BlogCard.vue';
-import { useDisplay } from 'vuetify';
+import BlogCard from '../components/BlogCard.vue'
+import { useDisplay } from 'vuetify'
 
-import { useBlogStore } from '../stores/blogs';
+import { useBlogStore } from '../stores/blogs'
 
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
 
 const blogStore = useBlogStore()
 
