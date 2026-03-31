@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
-import { blogData } from '../blogData'
+import { useBlogStore } from '@/stores/blogs'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,14 +31,15 @@ const router = createRouter({
   ]
 })
 
-// eslint-disable-next-line no-unused-vars
-router.beforeEach((to, from) => {
-  let path = to.fullPath
-  let splitPath = path.split('/')
+router.beforeEach(to => {
+  const blogStore = useBlogStore()
+
+  const path = to.fullPath
+  const splitPath = path.split('/')
   if (splitPath[1] === '') {
     document.title = 'Welcome'
   } else if (splitPath[1] === 'blog') {
-    document.title = blogData[splitPath[2]]?.title ?? 'Blog'
+    document.title = blogStore.blogs[splitPath[2]]?.title ?? 'Blog'
   } else if (splitPath[1] === 'resume') {
     document.title = 'Resume'
   } else {
