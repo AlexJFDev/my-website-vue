@@ -33,8 +33,8 @@ const router = createRouter({
 
 // eslint-disable-next-line no-unused-vars
 router.beforeEach((to, from) => {
-  let path = to.fullPath
-  let splitPath = path.split('/')
+  const path = to.fullPath
+  const splitPath = path.split('/')
   if (splitPath[1] === '') {
     document.title = 'Welcome'
   } else if (splitPath[1] === 'blog') {
