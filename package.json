@@ -11,6 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "frontmatter": "^0.0.3",
     "markdown-it": "^14.1.1",
     "pinia": "^3.0.3",
     "vue": "^3.3.4",
