@@ -1,6 +1,6 @@
 {
   "name": "my-website-vue",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "markdown-it": "^13.0.2",
+    "markdown-it": "^14.1.1",
+    "pinia": "^3.0.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
     "vuetify": "^3.8.11"

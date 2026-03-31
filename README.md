@@ -24,3 +24,12 @@ $SERVER["socket"] == ":443" {
 0 0 * * 0 /etc/init.d/lighttpd stop; certbot renew; cat /etc/letsencrypt/live/alexjf.dev/cert.pem /etc/letsencrypt/live/government.alexjf.dev/privkey.pem > /etc/letsencrypt/live/alexjf.dev/web.pem; /etc/init.d/lighttpd start; > /root/log/cerbot-renew.log
 ``` 
   It should all be in one line. This performs step 3 of this guide once a month. Without it, CertBot will automatically renew your certificate but Lighttpd will not recognize it.
+
+# Repository Setup
+## GitHub Actions
+This repo makes use of GitHub actions to deploy updates. Whenever a commit is made to the `production` branch, my Linode is automatically SSHed into, the latest version of the repo is built, node build is run, and the build result is copied to the correct folder.
+## Branch Protection
+`development` and `production` are branch protected. This means that commits cannot be made to them without a pull request. This forces me to follow the [Git Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
+
+# Management
+I am using a GitHub project and issues to manage the development of this website. The project board is linked here: [https://github.com/users/AlexJFDev/projects/1](https://github.com/users/AlexJFDev/projects/1).

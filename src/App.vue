@@ -34,7 +34,7 @@ const { mobile } = useDisplay()
         target="_blank"
       ></v-list-item>
     </v-navigation-drawer>
-    <v-app-bar :title="name"></v-app-bar>
+    <v-app-bar />
     <v-main class="main">
       <div class="content pa-2">
         <RouterView></RouterView>
