@@ -3,5 +3,6 @@ export interface BlogPost {
   subtitle: string,
   content: string,
   date: string,
-  tags: string[]
+  tags: string[],
+  image?: string
 }

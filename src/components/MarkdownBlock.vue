@@ -1,11 +1,11 @@
-<script setup>
-import MarkdownIt from 'markdown-it'
+<script setup lang="ts">
+import markdownIt from 'markdown-it'
 
 defineProps({
-  rawMarkdown: String
+  rawMarkdown: { type: String, default: '' }
 })
 
-const markdown = new MarkdownIt()
+const markdown = new markdownIt()
 </script>
 
 <template>

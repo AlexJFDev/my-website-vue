@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import MarkdownBlock from '../components/MarkdownBlock.vue';
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
@@ -10,7 +10,7 @@ const route = useRoute()
   return route.path.split('/').pop()
 })*/
 
-const blogKey = route.path.split('/').pop()
+const blogKey = route.path.split('/').pop() || ''
 
 const blogStore = useBlogStore()
 

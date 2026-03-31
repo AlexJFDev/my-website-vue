@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useRouter } from 'vue-router';
 import DateLabel from './DateLabel.vue';
 
@@ -22,7 +22,7 @@ const props = defineProps({
     required: true
   },
   tags: {
-    type: Array,
+    type: Array as () => string[],
     required: false,
     default: () => []
   },
@@ -82,7 +82,6 @@ function openBlog() {
     <v-img
       v-if="image"
       class="position-absolute w-100 h-100"
-      gradient
       :src="image"
       cover
       style="z-index: -1; top: 48px; opacity: 0.75;"

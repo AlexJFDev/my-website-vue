@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import MainHeading from '../components/MainHeading.vue';
 </script>
 
